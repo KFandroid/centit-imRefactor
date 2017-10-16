@@ -9,10 +9,6 @@
 
 layui.define(['layer', 'laytpl', 'upload'], function (exports) {
 
-    const Default_Avatar = 'http://tva3.sinaimg.cn/crop.0.0.180.180.180/7f5f6861jw1e8qgp5bmzyj2050050aa8.jpg'
-    const SERVICE_AVATAR = '/src/avatar/service.jpg';
-    const USER_AVATAR = '/src/avatar/user.png';
-
     var v = '3.5.4 Pro';
     var $ = layui.jquery;
     var layer = layui.layer;
@@ -29,7 +25,6 @@ layui.define(['layer', 'laytpl', 'upload'], function (exports) {
         this.v = v;
         $('body').on('click', '*[layim-event]', function (e) {
             var othis = $(this), methid = othis.attr('layim-event');
-
             events[methid] ? events[methid].call(this, othis, e) : '';
 
         });
@@ -1005,17 +1000,12 @@ layui.define(['layer', 'laytpl', 'upload'], function (exports) {
                         chatListMore();
 
                     }
-
                 });
                 layero.find('.layui-layer-content img').on('click', function (e) {
                     stope(e);
                 });
-                $('.layui-layim-min').css('top', '0px');
             }
-
         });
-
-
     };
 
     //打开添加好友、群组面板、好友分组面板
