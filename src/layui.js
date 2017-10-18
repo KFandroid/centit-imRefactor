@@ -8,7 +8,7 @@
 
  */
  
-;!function(win){
+;!function(win){ //win就是传入的window
   "use strict";
 
   var doc = document, config = {
